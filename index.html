@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proa · Tu próximo capítulo</title>
+  <meta name="description" content="Hay historias que aún no conoces. Descubre cómo tu empresa puede formar parte de una experiencia de voluntariado corporativo con Proa.">
+  <link rel="icon" type="image/png" href="assets/logo-color.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#inicio" aria-label="Proa, ir al inicio">
+        <img src="assets/logo-white.png" alt="" width="26" height="28">
+        <span>Proa</span>
+      </a>
+      <nav class="topbar__nav" aria-label="Principal">
+        <a href="#historia">La historia</a>
+        <a href="#continua">Capítulos</a>
+        <a class="btn btn--small btn--light" href="#contacto">Participar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Momento 1 · Una historia incompleta -->
+    <section class="hero" id="inicio">
+      <!-- Para usar video en lugar de foto, reemplazar la imagen por:
+           <video class="hero__bg" autoplay muted loop playsinline poster="assets/hero.jpg">
+             <source src="assets/hero.mp4" type="video/mp4">
+           </video> -->
+      <img class="hero__bg" src="assets/hero.jpg" alt="Un voluntario de Proa ondea una bandera con el logo de Proa frente al mar.">
+      <div class="container hero__inner">
+        <div class="hero__copy reveal">
+          <p class="eyebrow eyebrow--light">Voluntariado corporativo</p>
+          <h1 class="hero__title">
+            Hay historias que aún no conoces.
+            <span>Y posibilidades de formar parte de ellas que todavía no imaginas.</span>
+          </h1>
+          <div class="hero__actions">
+            <a class="btn btn--light" href="#historia">Quiero descubrir la historia</a>
+            <a class="btn btn--ghost" href="#contacto">Quiero conocer cómo participar</a>
+          </div>
+        </div>
+      </div>
+      <p class="hero__credit container">Iniciativa real de Proa · Imagen previamente autorizada</p>
+    </section>
+
+    <!-- Momento 2 · Tres decisiones personales -->
+    <section class="section" id="historia">
+      <div class="container container--narrow">
+        <header class="section__head reveal">
+          <p class="eyebrow">Capítulo 1</p>
+          <h2>Tres decisiones personales</h2>
+          <p class="lead">Cada historia empieza con una elección. Responde tres preguntas y descubre cómo podría comenzar la tuya.</p>
+        </header>
+
+        <div class="story-card reveal" id="story" aria-live="polite">
+          <div class="story-card__meta">
+            <span class="chip">Demo interactiva</span>
+            <span class="story-card__count" id="story-count">Capítulo 1 de 4</span>
+          </div>
+          <div class="progress" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+
+          <form id="story-form" novalidate>
+            <div id="story-step"><!-- Se completa desde app.js --></div>
+
+            <div class="story-card__nav">
+              <button type="button" class="btn btn--outline btn--small" id="story-prev">Anterior</button>
+              <button type="submit" class="btn btn--primary btn--small" id="story-next" disabled>
+                Continuar <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </form>
+
+          <div class="story-end" id="story-end" hidden>
+            <img class="story-end__icon" src="assets/logo-color.png" alt="" width="40" height="43">
+            <h3 tabindex="-1" id="story-end-title">Tu próximo capítulo puede comenzar aquí</h3>
+            <p>Tus respuestas son un punto de partida para explorar cómo tu empresa podría involucrarse en una experiencia de voluntariado corporativo.</p>
+            <p class="muted">No necesitas conocer todas las historias para comenzar a formar parte de una.</p>
+            <button type="button" class="btn btn--dark btn--block" id="story-reveal">Explorar cómo se presentaría mi capítulo</button>
+            <button type="button" class="btn btn--outline btn--small" id="story-reset">Reiniciar demo</button>
+          </div>
+
+          <p class="note">Prototipo conceptual para la sustentación. No consulta programas reales ni envía información a Proa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Momento 3 · La revelación (se muestra al terminar el recorrido) -->
+    <section class="section section--tinted" id="revelacion" hidden>
+      <div class="container">
+        <article class="reveal-card">
+          <div class="reveal-card__media">
+            <img id="reveal-img" src="assets/actividad.jpg" alt="">
+          </div>
+          <div class="reveal-card__body">
+            <p class="eyebrow">Capítulo 2 · La revelación</p>
+            <p class="echo" id="reveal-echo"></p>
+            <h2 id="reveal-title" tabindex="-1"></h2>
+            <p id="reveal-desc"></p>
+            <div class="support">
+              <p class="support__label" id="reveal-support-label"></p>
+              <p id="reveal-support"></p>
+            </div>
+            <blockquote class="quote">“No necesitas conocer todas las historias para comenzar a formar parte de una”.</blockquote>
+            <a class="btn btn--primary" href="#contacto" id="reveal-cta">Descubre cómo podemos comenzar</a>
+            <p class="note">Ejemplo ilustrativo. La versión final mostrará únicamente programas que Proa haya validado.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Momento 4 · El primer paso real -->
+    <section class="section" id="contacto">
+      <div class="container contact">
+        <header class="contact__intro reveal">
+          <p class="eyebrow">Capítulo 3 · El primer paso real</p>
+          <h2>Tu empresa puede comenzar una nueva historia</h2>
+          <p class="lead">Déjanos tus datos para conocer las oportunidades de voluntariado corporativo.</p>
+          <ol class="steps">
+            <li><span><strong>Te contactamos</strong> para conocer a tu empresa y a tu equipo.</span></li>
+            <li><span><strong>Coordinamos una reunión</strong> y te presentamos alternativas.</span></li>
+            <li><span><strong>Preparamos una propuesta</strong> a la medida de tu capítulo.</span></li>
+          </ol>
+        </header>
+
+        <div class="form-card reveal">
+          <form id="lead-form" novalidate>
+            <div class="field">
+              <label for="f-nombre">Nombre completo</label>
+              <input id="f-nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-empresa">Empresa</label>
+              <input id="f-empresa" name="empresa" type="text" placeholder="Nombre de la organización" autocomplete="organization" required>
+            </div>
+            <div class="field">
+              <label for="f-cargo">Cargo</label>
+              <input id="f-cargo" name="cargo" type="text" placeholder="Tu cargo" autocomplete="organization-title" required>
+            </div>
+            <div class="field">
+              <label for="f-correo">Correo corporativo</label>
+              <input id="f-correo" name="correo" type="email" placeholder="nombre@empresa.com" autocomplete="email" required>
+              <p class="field__error" id="f-correo-error" hidden>Ingresa un correo válido, por ejemplo nombre@empresa.com</p>
+            </div>
+            <div class="field">
+              <label for="f-modalidad">Modalidad de interés</label>
+              <select id="f-modalidad" name="modalidad" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="equipo">Voluntariado en equipo</option>
+                <option value="habilidades">Voluntariado de habilidades profesionales</option>
+                <option value="virtual">Voluntariado virtual</option>
+                <option value="explorar">Aún no lo sé, quiero explorar</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block" id="lead-submit" disabled>Quiero conocer el capítulo que podemos construir juntos</button>
+            <p class="note">Vista referencial del formulario. Su funcionamiento requerirá desarrollo técnico, autorización de Proa y tratamiento adecuado de datos personales.</p>
+          </form>
+
+          <div class="form-done" id="lead-done" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <h3 tabindex="-1" id="lead-done-title">¡Gracias! Tu capítulo empieza aquí.</h3>
+            <p id="lead-done-text"></p>
+            <p class="note">Simulación: en esta demo no se envió ninguna información a Proa.</p>
+            <button type="button" class="btn btn--outline btn--small" id="lead-reset">Volver al formulario</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Momento 5 · Una historia que continúa -->
+    <section class="section section--dark" id="continua">
+      <div class="container">
+        <header class="section__head section__head--center reveal">
+          <p class="eyebrow eyebrow--light">Capítulo 4 · Una historia que continúa</p>
+          <h2>La experiencia no termina cuando envías el formulario</h2>
+          <p class="lead">Si tu empresa desarrolla una actividad con Proa, puede autorizar que su experiencia se convierta en un nuevo capítulo de esta historia, para que otras empresas conozcan experiencias reales.</p>
+        </header>
+
+        <h3 class="subhead reveal">Páginas que ya se están escribiendo</h3>
+        <div class="gallery">
+          <figure class="reveal">
+            <img src="assets/dba-guayaquil.jpg" alt="Dos integrantes de Proa sonríen junto al banner del Día de las Buenas Acciones en Guayaquil.">
+            <figcaption><strong>Día de las Buenas Acciones</strong> 8va Conferencia Regional Latinoamericana · Guayaquil 2026</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="assets/dba-lima.jpg" alt="Panel de conversación en el escenario del Día de las Buenas Acciones, con Proa entre los co-organizadores.">
+            <figcaption><strong>Día de las Buenas Acciones</strong> Proa entre los co-organizadores y colaboradores</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="assets/connect.jpg" alt="Tres personas posan frente a la pantalla del evento Proa Connect.">
+            <figcaption><strong>Proa Connect</strong> Un encuentro con el apoyo de empresas aliadas</figcaption>
+          </figure>
+        </div>
+
+        <h3 class="subhead reveal">Próximos capítulos</h3>
+        <div class="chapters">
+          <article class="chapter chapter--template reveal">
+            <p class="chapter__tag">Próximo capítulo</p>
+            <h3>El capítulo de tu empresa</h3>
+            <ul class="chapter__parts">
+              <li><span aria-hidden="true">◐</span> Fotografías de la actividad</li>
+              <li><span aria-hidden="true">❝</span> Testimonios del equipo</li>
+              <li><span aria-hidden="true">✦</span> Aprendizajes compartidos</li>
+              <li><span aria-hidden="true">▲</span> Resultados verificables</li>
+            </ul>
+          </article>
+          <article class="chapter chapter--empty reveal">
+            <p class="chapter__tag">Capítulo por escribir</p>
+            <p>Espacio reservado para un caso autorizado.</p>
+          </article>
+          <article class="chapter chapter--empty reveal">
+            <p class="chapter__tag">Capítulo por escribir</p>
+            <p>Espacio reservado para un caso autorizado.</p>
+          </article>
+        </div>
+
+        <p class="note note--light">Cada capítulo se publica solo cuando existen casos autorizados por la empresa y por Proa.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="brand">
+        <img src="assets/logo-white.png" alt="" width="22" height="24">
+        <span>Proa</span>
+      </span>
+      <span class="footer__tagline">Descubre tu forma de ayudar</span>
+      <span>Prototipo conceptual para la sustentación.</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
