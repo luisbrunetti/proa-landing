@@ -47,6 +47,10 @@
             <a class="btn btn--light" href="#historia">Quiero descubrir la historia</a>
             <a class="btn btn--ghost" href="#contacto">Quiero conocer cómo participar</a>
           </div>
+          <button type="button" class="hero__video" id="video-open">
+            <span class="hero__play" aria-hidden="true">▶</span>
+            Ver la historia en video
+          </button>
         </div>
       </div>
       <p class="hero__credit container">Iniciativa real de Proa · Imagen previamente autorizada</p>
@@ -186,6 +190,74 @@
           <p class="lead">Si tu empresa desarrolla una actividad con Proa, puede autorizar que su experiencia se convierta en un nuevo capítulo de esta historia, para que otras empresas conozcan experiencias reales.</p>
         </header>
 
+        <!-- Capítulo real: jornada de Promart Homecenter (publicación de Proa en Instagram) -->
+        <article class="case" aria-labelledby="case-title">
+          <div class="case__intro">
+            <div class="reveal">
+              <p class="eyebrow eyebrow--light">Un capítulo real · Promart Homecenter</p>
+              <h3 class="case__title" id="case-title">Juntos por el bienestar animal</h3>
+              <p class="case__lead">El jueves 19 de marzo, 20 voluntarios de Promart Homecenter participaron en una jornada de voluntariado en el albergue Marlene y sus Angelitos, en Ate.</p>
+            </div>
+            <ul class="facts reveal">
+              <li><strong>20</strong> voluntarios de Promart</li>
+              <li><strong>1</strong> jornada en el albergue</li>
+              <li><strong>3</strong> tipos de donación entregados</li>
+            </ul>
+          </div>
+
+          <div class="mosaic">
+            <figure class="mosaic__big reveal">
+              <img src="assets/promart/grupo.jpg" alt="Voluntarios de Promart y Proa sonríen frente al albergue con un cartel de Promart Sostenible." loading="lazy">
+              <figcaption>El equipo de voluntarios en el albergue</figcaption>
+            </figure>
+            <figure class="mosaic__wide reveal">
+              <img src="assets/promart/perrito.jpg" alt="Un voluntario con mascarilla acerca su rostro a un perrito recién bañado." loading="lazy">
+              <figcaption>Baño de perritos</figcaption>
+            </figure>
+            <figure class="reveal">
+              <img src="assets/promart/secado.jpg" alt="Dos voluntarias secan a un cachorro después del baño." loading="lazy">
+            </figure>
+            <figure class="reveal">
+              <img src="assets/promart/bano.jpg" alt="Dos perritos mojados durante el baño en el albergue." loading="lazy">
+            </figure>
+            <figure class="mosaic__wide reveal">
+              <img src="assets/promart/voluntarias.jpg" alt="Cinco voluntarias cargan a perritos del albergue." loading="lazy">
+              <figcaption>Los perritos del albergue</figcaption>
+            </figure>
+            <figure class="reveal">
+              <img src="assets/promart/limpieza.jpg" alt="Un voluntario limpia el piso del albergue con una escoba." loading="lazy">
+              <figcaption>Limpieza de áreas comunes</figcaption>
+            </figure>
+            <figure class="reveal">
+              <img src="assets/promart/patio.jpg" alt="Dos voluntarios barren el barro de un área común del albergue." loading="lazy">
+            </figure>
+          </div>
+
+          <div class="case__details">
+            <div class="reveal">
+              <h4 class="case__subtitle">Lo que hicieron juntos</h4>
+              <ul class="case__list">
+                <li><strong>Baño de perritos</strong> Los voluntarios bañaron a los perritos del albergue.</li>
+                <li><strong>Limpieza de áreas comunes</strong> Limpiaron las áreas comunes del albergue.</li>
+                <li><strong>Recolección interna por áreas</strong> El equipo de Promart reunió donaciones dentro de la empresa.</li>
+                <li><strong>Entrega de donaciones</strong> Alimento, ropa y útiles de aseo para los perritos del albergue.</li>
+              </ul>
+            </div>
+            <figure class="case__quote reveal">
+              <blockquote>“Cada acción suma para mejorar la calidad de vida de más animales que esperan una segunda oportunidad”.</blockquote>
+              <figcaption>Gracias a cada voluntario y al equipo de Promart por su compromiso y empatía.</figcaption>
+            </figure>
+          </div>
+
+          <div class="case__cta reveal">
+            <p><strong>¿Tu empresa también quiere generar impacto social?</strong> Sigamos generando impacto, una jornada a la vez.</p>
+            <div class="case__actions">
+              <a class="btn btn--light" href="#contacto">Quiero escribir el capítulo de mi empresa</a>
+              <a class="text-link" href="mailto:anel@proa.pe">o escríbenos a anel@proa.pe</a>
+            </div>
+          </div>
+        </article>
+
         <h3 class="subhead reveal">Páginas que ya se están escribiendo</h3>
         <div class="gallery">
           <figure class="reveal">
@@ -240,6 +312,15 @@
       <span>Prototipo conceptual para la sustentación.</span>
     </div>
   </footer>
+
+  <!-- Video documental del Momento 1 -->
+  <dialog class="video-modal" id="video-modal" aria-labelledby="video-title">
+    <div class="video-modal__head">
+      <h2 id="video-title">¡Aún estás a tiempo de sumarte!</h2>
+      <button type="button" class="video-modal__close" id="video-close" aria-label="Cerrar video">×</button>
+    </div>
+    <video class="video-modal__video" id="story-video" src="assets/video/historia.mp4" poster="assets/video/historia-poster.jpg" controls playsinline preload="none"></video>
+  </dialog>
 
   <script src="app.js"></script>
 </body>

@@ -220,6 +220,25 @@
     $('#f-nombre').focus();
   });
 
+  // ---------- Video documental (Momento 1) ----------
+  const videoModal = $('#video-modal');
+  const storyVideo = $('#story-video');
+
+  $('#video-open').addEventListener('click', () => {
+    videoModal.showModal();
+    storyVideo.play().catch(() => { /* si el navegador bloquea el autoplay, quedan los controles */ });
+  });
+
+  $('#video-close').addEventListener('click', () => videoModal.close());
+  videoModal.addEventListener('click', (e) => {
+    if (e.target === videoModal) videoModal.close();
+  });
+  // Al cerrar, el video se detiene y vuelve al inicio.
+  videoModal.addEventListener('close', () => {
+    storyVideo.pause();
+    storyVideo.currentTime = 0;
+  });
+
   // ---------- Detalles de interfaz ----------
   const topbar = $('.topbar');
   const onScroll = () => topbar.classList.toggle('is-solid', window.scrollY > 24);
