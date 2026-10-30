@@ -8,7 +8,7 @@
       text: '¿Qué te gustaría que tu empresa pudiera dejar en otras personas?',
       options: [
         { value: 'oportunidad', label: 'Una oportunidad que antes no tenían' },
-        { value: 'recuerdo', label: 'Un recuerdo de colaboración y cercanía' },
+        { value: 'recuerdo', label: 'Un momento memorable' },
         { value: 'certeza', label: 'La certeza de que alguien decidió involucrarse' },
       ],
     },
@@ -36,7 +36,7 @@
   // Ejemplos ilustrativos: en producción solo deben usarse programas validados por Proa.
   const ECHO = {
     oportunidad: 'Quieres dejar una oportunidad que antes no tenían.',
-    recuerdo: 'Quieres dejar un recuerdo de colaboración y cercanía.',
+    recuerdo: 'Quieres dejar un momento memorable.',
     certeza: 'Quieres dejar la certeza de que alguien decidió involucrarse.',
   };
 

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 
@@ -94,7 +94,6 @@
             <button type="button" class="btn btn--outline btn--small" id="story-reset">Reiniciar demo</button>
           </div>
 
-          <p class="note">Prototipo conceptual para la sustentación. No consulta programas reales ni envía información a Proa.</p>
         </div>
       </div>
     </section>
@@ -133,14 +132,14 @@
           <ol class="steps">
             <li><span><strong>Te contactamos</strong> para conocer a tu empresa y a tu equipo.</span></li>
             <li><span><strong>Coordinamos una reunión</strong> y te presentamos alternativas.</span></li>
-            <li><span><strong>Preparamos una propuesta</strong> a la medida de tu capítulo.</span></li>
+            <li><span><strong>Te preparamos una propuesta</strong> en base a tus objetivos.</span></li>
           </ol>
         </header>
 
         <div class="form-card reveal">
           <form id="lead-form" novalidate>
             <div class="field">
-              <label for="f-nombre">Nombre completo</label>
+              <label for="f-nombre">Nombres y Apellidos</label>
               <input id="f-nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
             </div>
             <div class="field">
@@ -152,7 +151,7 @@
               <input id="f-cargo" name="cargo" type="text" placeholder="Tu cargo" autocomplete="organization-title" required>
             </div>
             <div class="field">
-              <label for="f-correo">Correo corporativo</label>
+              <label for="f-correo">Correo</label>
               <input id="f-correo" name="correo" type="email" placeholder="nombre@empresa.com" autocomplete="email" required>
               <p class="field__error" id="f-correo-error" hidden>Ingresa un correo válido, por ejemplo nombre@empresa.com</p>
             </div>
@@ -166,8 +165,7 @@
                 <option value="explorar">Aún no lo sé, quiero explorar</option>
               </select>
             </div>
-            <button type="submit" class="btn btn--primary btn--block" id="lead-submit" disabled>Quiero conocer el capítulo que podemos construir juntos</button>
-            <p class="note">Vista referencial del formulario. Su funcionamiento requerirá desarrollo técnico, autorización de Proa y tratamiento adecuado de datos personales.</p>
+            <button type="submit" class="btn btn--primary btn--block" id="lead-submit" disabled>Construyamos juntos nuestra siguiente historia</button>
           </form>
 
           <div class="form-done" id="lead-done" hidden>
@@ -322,6 +320,6 @@
     <video class="video-modal__video" id="story-video" src="assets/video/historia.mp4" poster="assets/video/historia-poster.jpg" controls playsinline preload="none"></video>
   </dialog>
 
-  <script src="app.js?v=2"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>
